@@ -5,3 +5,6 @@ consists of 5 parts
 3) CSS for styling HTML pages
 4) Database structure and command lines
 5) Final project report consisting of HLD
+
+
+FINAL STATUS: Individual modules are working. Need time for integration
