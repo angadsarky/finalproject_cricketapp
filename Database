@@ -1,0 +1,277 @@
+create table matchentity
+( MatchID number(3) PRIMARY KEY,
+Team1 varchar2(15),
+Team2 varchar2(15),
+date1 varchar2(15),
+location varchar2(10)); 
+
+
+insert into matchentity(MatchID,Team1,Team2,date1,location) values (1, 'India', 'England', '1-Aug-2018','Edgbaston');
+insert into matchentity(MatchID,Team1,Team2,date1,location) values(2, 'SriLanka', 'SouthAfrica', '8-Aug-2018', 'Pallekele');
+insert into matchentity(MatchID,Team1,Team2,date1,location) values(3, 'WestIndies','Bangladesh', '5-Aug-2018','Florida');
+insert into matchentity(MatchID,Team1,Team2,date1,location) values(4, 'Australia', 'Pakistan', '9-Jul-2018','Harare');
+	
+
+create table teamdetails
+( TeamID varchar2(10),
+TeamName varchar2(15));
+
+insert into teamdetails(TeamID,TeamName) values('IND','India');
+insert into teamdetails(TeamID,TeamName) values('AUS','Australia');
+insert into teamdetails(TeamID,TeamName) values('ENG','England');
+insert into teamdetails(TeamID,TeamName) values('WI','West Indies');
+insert into teamdetails(TeamID,TeamName) values('SL','Sri Lanka');
+insert into teamdetails(TeamID,TeamName) values('SA','South Africa);
+insert into teamdetails(TeamID,TeamName) values('PAK','Pakistan');
+insert into teamdetails(TeamID,TeamName) values('NZ', 'New Zeland');
+insert into teamdetails(TeamID,TeamName) values('BAN', 'Bangladesh');
+
+create table player(
+PlayerID varchar2(10),
+PlayerName varchar2(25),
+Team varchar2(15),
+TeamID varchar2(10));
+
+insert into player(PlayerID,PlayerName,Team,TeamID) values('IND1','Virat Kohli','INDIA','IND');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('IND2','Ajinkya Rahane','INDIA','IND');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('IND3','Rohit Sharma','INDIA','IND');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('IND4','Shikhar Dhawan','INDIA','IND');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('IND5','KL Rahul','INDIA','IND');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('IND6','MS Dhoni','INDIA','IND');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('IND7','Hardik Pandya','INDIA','IND');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('IND8','R Ashwin','INDIA','IND');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('IND9','R Jadeja','INDIA','IND');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('IND10','Bhuvneshwar Kumar','INDIA','IND');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('IND11','Jasprit Bumrah','INDIA','IND');
+
+insert into player(PlayerID,PlayerName,Team,TeamID) values('AUS1','Cameron Bancroft','AUSTRALIA','AUS');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('AUS2','Joe Burns','AUSTRALIA','AUS');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('AUS3','Peter Handscomb','AUSTRALIA','AUS');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('AUS4','Chris Lynn','AUSTRALIA','AUS');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('AUS5','Steve Smith','AUSTRALIA','AUS');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('AUS6','Tim Paine','AUSTRALIA','AUS');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('AUS7','Glenn Maxwell','AUSTRALIA','AUS');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('AUS8','Mitchell Marsh','AUSTRALIA','AUS');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('AUS9','Pat Cummins','AUSTRALIA','AUS');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('AUS10','Mitchell Starc','AUSTRALIA','AUS');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('AUS11','Nathan Lyon','AUSTRALIA','AUS');
+
+insert into player(PlayerID,PlayerName,Team,TeamID) values('ENG1','Alastair Cook','ENGLAND','ENG');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('ENG2','Eoin Morgan','ENGLAND','ENG');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('ENG3','Joe Root','ENGLAND','ENG');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('ENG4','Jason Roy','ENGLAND','ENG');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('ENG5','Jos Buttler','ENGLAND','ENG');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('ENG6','Moeen Ali','ENGLAND','ENG');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('ENG7','Chris Woakes','ENGLAND','ENG');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('ENG8','Ben Stokes','ENGLAND','ENG');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('ENG9','James Anderson','ENGLAND','ENG');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('ENG10','Tom Curran','ENGLAND','ENG');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('ENG11','Adil Rashid','ENGLAND','ENG');
+
+insert into player(PlayerID,PlayerName,Team,TeamID) values('WI1','Jason Holder','WEST INDIES','WI');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('WI2','Carlos Brathwaite','WEST INDIES','WI');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('WI3','Kraigg Braithwaite','WEST INDIES','WI');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('WI4','Chris Gayle','WEST INDIES','WI');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('WI5','Kieran Powell','WEST INDIES','WI');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('WI6','lendl Simmons','WEST INDIES','WI');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('WI7','Marlon Samuels','WEST INDIES','WI');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('WI8','Kieron Pollard','WEST INDIES','WI');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('WI9','Kemar Roach','WEST INDIES','WI');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('WI10','Jason Holder','WEST INDIES','WI');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('WI11','Sunil Narine','WEST INDIES','WI');
+
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SL1','Dinesh Chandimal','SRI LANKA','SL');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SL2','Angelo Mathews','SRI LANKA','SL');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SL3','Dimuth Karu','SRI LANKA','SL');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SL4','Upul Tharanga','SRI LANKA','SL');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SL5','Danushka Gunat','SRI LANKA','SL');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SL6','Dhananjay','SRI LANKA','SL');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SL7','N Dickwella','SRI LANKA','SL');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SL8','Kusal Mendis','SRI LANKA','SL');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SL9','K Perera','SRI LANKA','SL');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SL10','J Mendis','SRI LANKA','SL');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SL11','Nuwan Pradeep','SRI LANKA','SL');
+
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SA1','Hashim Amla','SOUTH AFRICA','SA');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SA2','Faf du Plessis','SOUTH AFRICA','SA');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SA3','David Miller','SOUTH AFRICA','SA');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SA4','Q de Kock','SOUTH AFRICA','SA');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SA5','JP Duminy','SOUTH AFRICA','SA');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SA6','Chris Morris','SOUTH AFRICA','SA');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SA7','Lungi Ngidi','SOUTH AFRICA','SA');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SA8','Dale Steyn','SOUTH AFRICA','SA');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SA9','K Maharaj','SOUTH AFRICA','SA');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SA10','B Hendricks','SOUTH AFRICA','SA');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('SA11','Imran Tahir','SOUTH AFRICA','SA');
+
+insert into player(PlayerID,PlayerName,Team,TeamID) values('PAK1','Sarfraz Ahmed','PAKISTAN','PAK');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('PAK2','Azhar Ali','PAKISTAN','PAK');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('PAK3','Fakhar Zaman','PAKISTAN','PAK');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('PAK4','Imam Haq','PAKISTAN','PAK');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('PAK5','Shan M','PAKISTAN','PAK');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('PAK6','Asad Shafiq','PAKISTAN','PAK');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('PAK7','Haris Sohail','PAKISTAN','PAK');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('PAK8','Sarfraz Ahmed','PAKISTAN','PAK');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('PAK9','Babar Azam','PAKISTAN','PAK');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('PAK10','M Amir','PAKISTAN','PAK');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('PAK11','Hasan Ali','PAKISTAN','PAK');
+
+insert into player(PlayerID,PlayerName,Team,TeamID) values('NZ1','Kane Williamson','NEW ZELAND','NZ');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('NZ2','Tim Southee','NEW ZELAND','NZ');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('NZ3','Marin Guptill','NEW ZELAND','NZ');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('NZ4','Tom Latham','NEW ZELAND','NZ');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('NZ5','Ross Taylor','NEW ZELAND','NZ');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('NZ6','G Phillips','NEW ZELAND','NZ');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('NZ7','Corey Anderson','NEW ZELAND','NZ');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('NZ8','Trent Boult','NEW ZELAND','NZ');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('NZ9','Matt Henry','NEW ZELAND','NZ');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('NZ10','Adam Milne','NEW ZELAND','NZ');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('NZ11','Ish Sodhi','NEW ZELAND','NZ');
+
+insert into player(PlayerID,PlayerName,Team,TeamID) values('BAN1','Tamim Iqbal','BANGLADESH','BAN');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('BAN2','Soumya Sarkar','BANGLADESH','BAN');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('BAN3','S Rahman','BANGLADESH','BAN');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('BAN4','M Haque','BANGLADESH','BAN');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('BAN5','Shakib Al Hasan','BANGLADESH','BAN');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('BAN6','Nasir Hossain','BANGLADESH','BAN');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('BAN7','Shaiful Islam','BANGLADESH','BAN');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('BAN8','R Hossain','BANGLADESH','BAN');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('BAN9','Abu Hider','BANGLADESH','BAN');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('BAN10','S Islam','BANGLADESH','BAN');
+insert into player(PlayerID,PlayerName,Team,TeamID) values('BAN11','T Islam','BANGLADESH','BAN');
+
+create table stats(
+PlayerID varchar2(10),
+Matches number(5),
+Runs number(5),
+Wickets number(5));
+
+insert into stats(PlayerID,Matches,Runs,Wickets) values('IND1',211,9779,4);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('IND2',90,2962,1);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('IND3',183,6748,8);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('IND4',105,4481,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('IND5',12,257,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('IND6',321,10046,1);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('IND7',41,670,40);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('IND8',111,675,150);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('IND9',136,1914,155);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('IND10',87,400,90);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('IND11',37,11,64);
+
+
+
+insert into stats(PlayerID,Matches,Runs,Wickets) values('AUS1',9,402,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('AUS2',20,1933,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('AUS3',9,1402,7);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('AUS4',39,875,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('AUS5',31,981,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('AUS6',35,890,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('AUS7',85,2181,45);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('AUS8',53,1428,44);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('AUS9',39,144,64);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('AUS10',72,262,141);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('AUS11',15,50,18);
+
+insert into stats(PlayerID,Matches,Runs,Wickets) values('ENG1',92,3204,1);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('ENG2',208,6362,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('ENG3',116,4800,20);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('ENG4',65,2422,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('ENG5',117,2688,1);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('ENG6',82,1587,75);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('ENG7',76,1034,109);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('ENG8',70,1846,58);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('ENG9',192,560,269);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('ENG10',8,70,12);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('ENG11',73,491,113);
+
+insert into stats(PlayerID,Matches,Runs,Wickets) values('WI1',73,1262,110);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('WI2',28,1284,26);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('WI3',10,262,10);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('WI4',287,11333,165);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('WI5',39,901,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('WI6',68,1958,1);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('WI7',199,5472,85);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('WI8',101,2289,50);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('WI9',73,121,119);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('WI10',31,1162,140);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('WI1',53,2262,40);
+
+
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SL1',33,1262,20);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SL2',42,2122,1);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SL3',13,252,11);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SL4',81,4122,15);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SL5',95,4212,64);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SL6',26,1211,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SL7',42,2156,1);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SL8',35,290,41);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SL9',29,62,47);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SL10',52,452,61);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SL11',45,222,64);
+
+
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SA1',45,1231,5);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SA2',12,132,1);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SA3',85,4331,23);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SA4',215,3231,12);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SA5',35,1131,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SA6',15,111,25);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SA7',45,631,55);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SA8',35,131,54);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SA9',17,71,19);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SA10',44,231,56);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('SA11',122,131,112);
+
+
+insert into stats(PlayerID,Matches,Runs,Wickets) values('PAK1',5,31,3);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('PAK2',45,821,1);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('PAK3',53,1431,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('PAK4',46,334,3);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('PAK5',115,5331,4);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('PAK6',35,341,33);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('PAK7',45,341,63);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('PAK8',55,351,153);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('PAK9',35,251,31);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('PAK10',5,3,8);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('PAK11',9,1,7);
+
+
+insert into stats(PlayerID,Matches,Runs,Wickets) values('NZ1',35,311,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('NZ2',155,3341,3);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('NZ3',115,3131,1);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('NZ4',34,1221,5);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('NZ5',42,511,15);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('NZ6',205,4311,42);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('NZ7',145,1511,64);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('NZ8',53,711,41);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('NZ9',25,341,52);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('NZ10',12,31,22);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('NZ11',25,57,23);
+
+insert into stats(PlayerID,Matches,Runs,Wickets) values('BAN1',15,141,0);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('BAN2',23,551,4);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('BAN3',112,3141,18);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('BAN4',65,1231,21);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('BAN5',42,1320,7);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('BAN6',95,3894,41);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('BAN7',33,1441,10);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('BAN8',32,611,39);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('BAN9',88,941,125);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('BAN10',64,141,89);
+insert into stats(PlayerID,Matches,Runs,Wickets) values('BAN11',55,43,73);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
